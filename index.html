@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <style>input{display: block;margin-left: 50px}</style>
+        <title>Grow App</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
+        <link rel="stylesheet" href="static/CSS/style.css"/>
+    </head>
+    <body>
+        <div id="wrapper">
+            <img src="static\images\logo.jpg" alt="loyal" class="center">
+            <div class="container-fluid">
+                <h1 style="color: darkslategrey">Look up your favorite strain <br> <small>or find a new favorite</small></h1>
+                <p style="color: darkslategrey">Click on the header of a column to sort the table</p>
+                <div class="search-content">
+                    <input type="text" id="myinput" placeholder="Search for strains.." title="Type in something">
+                    <table class="searchable sortable">
+                        <thead><tr>
+                            <th><span id="strain" class="w3-button table-column">Strain <i class="caret"></span></th>
+                            <th><span id="THC" class="w3-button table-column">THC <i class="caret"></span></th>
+                            <th><span id="CBD" class="w3-button table-column">CBD <i class="caret"></span></th>
+                            <th><span id="Indica" class="w3-button table-column">Indica <i class="caret"></span></th>
+                            <th><span id="Sativa" class="w3-button table-column">Sativa <i class="caret"></span></th>
+                            <th><span id="Hybrid" class="w3-button table-column">Hybrid <i class="caret"></span></th>
+                            </tr></thead>
+                            <tbody id="mytable"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="navbar" id="myNavbar">
+            <a class="nav-link" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
+            <a class="nav-link active" href="#"><i class="fa fa-fw fa-search"></i> Search</a>
+            <a class="nav-link" href="#"><i class="fa fa-filter"></i> Filter</a>
+            <a class="nav-link" href="#"><i class="fa fa-leaf"></i> My Grow</a>
+            <a class="nav-link" href="#"><i class="fa fa-cogs"></i> Tools</a>
+            <a href="javascript:void(0);" class="icon" onclick="navFunction()">&#9776;</a></li>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="static/js/data.js"></script>
+        <script src="static/js/app.js"></script>
+    </div>
+</body>
+</html>
