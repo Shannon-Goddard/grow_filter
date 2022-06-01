@@ -20,7 +20,7 @@ In this module, we used a .csv file with 2,793 rows of data for each strain list
 - Create a filter search from a “real-world” classification dataset and display more information from the user's selection   
 
 ## Summary
-**Check-out this interactive website [here](https://shannon-goddard.github.io/grow_search/)**  
+**Check-out this interactive website [here](https://shannon-goddard.github.io/grow_filter/)**  
 
 *Coming soon...*  
 **Check-out the app this project was used with [here]()**
