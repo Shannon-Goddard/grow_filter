@@ -1,100 +1,44 @@
 var table = document.getElementById('mytable');
 var input = document.getElementById('myinput');
 var tableData = data;
-var caretUpClassName = 'fa fa-caret-up';
-var caretDownClassName = 'fa fa-caret-down';
-
-const sort_by = (field, reverse, primer) => {
-
-  const key = primer ?
-    function(x) {
-      return primer(x[field]);
-    } :
-    function(x) {
-      return x[field];
-    };
-
-  reverse = !reverse ? 1 : -1;
-
-
-
+$('th').click(function(){
+  var table = $(this).parents('table').eq(0)
+  var rows = table.find('tr:gt(0)').toArray().sort(comparer($(this).index()))
+  this.asc = !this.asc
+  if (!this.asc){rows = rows.reverse()}
+  for (var i = 0; i < rows.length; i++){table.append(rows[i])}
+})
+function comparer(index) {
   return function(a, b) {
-    
-    return a = key(a)?key(a):'', b = key(b)?key(b):'', reverse * ((a > b) - (b > a));
-  
-  }
- 
-};
-
-
-function clearArrow() {
-  let carets = document.getElementsByClassName('caret');
-  for (let caret of carets) {
-    caret.className = "caret";
+    var valA = getCellValue(a, index), valB = getCellValue(b, index)
+    return $.isNumeric(valA) && $.isNumeric(valB) ? valA - valB : valA.toString().localeCompare(valB)
   }
 }
-
-
-function toggleArrow(event) {
-  let element = event.target;
-  let caret, field, reverse;
-  if (element.tagName === 'SPAN') {
-    caret = element.getElementsByClassName('caret')[0];
-    field = element.id
-  }
-  else {
-    caret = element;
-    field = element.parentElement.id
-  }
-
-  let iconClassName = caret.className;
-  clearArrow();
-  if (iconClassName.includes(caretUpClassName)) {
-    caret.className = `caret ${caretDownClassName}`;
-    reverse = false;
-  } else {
-    reverse = true;
-    caret.className = `caret ${caretUpClassName}`;
-  }
-
-  tableData.sort(sort_by(field, reverse));
-  populateTable();
-}
-
-
+function getCellValue(row, index){ return $(row).children('td').eq(index).text() }
+populateTable();
 function populateTable() {
   table.innerHTML = '';
   for (let data of tableData) {
     let row = table.insertRow(-1);
-
     let strain = row.insertCell(0);
     strain.innerHTML = data.strain;
-
     let THC = row.insertCell(1);
     THC.innerHTML = data.THC;
-
     let CBD = row.insertCell(2);
     CBD.innerHTML = data.CBD;
-
     let Indica = row.insertCell(3);
     Indica.innerHTML = data.Indica;
-
     let Sativa = row.insertCell(4);
     Sativa.innerHTML = data.Sativa;
-
     let Hybrid = row.insertCell(5);
     Hybrid.innerHTML = data.Hybrid;
   }
-  
   filterTable();
 }
-
-
 function filterTable() {
   let filter = input.value.toUpperCase();
   rows = table.getElementsByTagName("TR");
   let flag = false;
-
   for (let row of rows) {
     let cells = row.getElementsByTagName("TD");
     for (let cell of cells) {
@@ -104,34 +48,20 @@ function filterTable() {
         } else {
           cell.style.backgroundColor = '';
         }
-
         flag = true;
       } else {
         cell.style.backgroundColor = '';
       }
     }
-
     if (flag) {
       row.style.display = "";
     } else {
       row.style.display = "none";
     }
-
     flag = false;
   }
 }
-
-
 populateTable();
-
-let tableColumns = document.getElementsByClassName('table-column');
-
-for (let column of tableColumns) {
-  column.addEventListener('click', function(event) {
-    toggleArrow(event);
-  });
-}
-
 input.addEventListener('keyup', function(event) {
   filterTable();
 });
