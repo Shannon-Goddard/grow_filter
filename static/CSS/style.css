@@ -52,15 +52,7 @@ p {
   margin-right: auto;
   width: 10%;
 }
-/* Container holding the search image and the text */
-.container-fluid {
-  width: 100%;
-  inline-size: 100%;
-  position: relative;
-  text-align: left;
-  color: black;
-}
-#myInput {
+#myinput {
   box-shadow: 0 0.3vw 1.0vw rgb(0 0 0 / 0.2);
   width: 100%; /* Full-width */
   font-size: 2.0vw; /* Increase font-size */
@@ -68,7 +60,7 @@ p {
   border: 0.1vw solid #ddd; /* Add a grey border */
   margin-bottom: 1.0vw; /* Add some space below the input */
 }
-#myUL {
+#types {
   /* Remove default list styling */
   display: none;
   box-shadow: 0 0.3vw 1.0vw rgb(0 0 0 / 0.2);
@@ -76,7 +68,7 @@ p {
   padding: 0;
   margin: 0;
 }
-#myUL li a {
+#types {
   border: 0.1vw solid #ddd; /* Add a border to all links */
   margin-top: -1.0vw; /* Prevent double borders */
   background-color: white; /* White background color */
@@ -86,48 +78,15 @@ p {
   color: black; /* Add a black text color */
   display: block; /* Make it into a block element to fill the whole list */
 }
-#myUL li a:hover:not(.header) {
+tr:hover:not(.th) {
   background-color: #04AA6D; /* Add a hover effect to all links, except for headers */
 }
-/* user selection data css*/
-.post-container {
-  text-align: justify;
-  text-justify: inter-word;
-  width:100%;
-  inline-size: 100%;
-  position: relative;
-  padding: 2.0vmin 2.0vmin calc(20px + 10.0vmin) 2.0vmin;
- }
-#image {
-  float: left;
-  display: none;
-  margin: 1.0vmin 2.0vmin 0.0vmin 0.0vmin;
-  -webkit-filter: drop-shadow(5px 5px 5px rgb(0 0 0 / 0.2));
-  filter: drop-shadow(5px 5px 5px rgb(0 0 0 / 0.2));
-}
-.info {
-  inline-size: 100%;
-  overflow-wrap: break-word;
-  font-weight: bold;
-}
-.more_info {
-  inline-size: 100%;
-  overflow-wrap: break-word;
-  font-weight: bold;
-}
-.post-title {
-  inline-size: 100%;
-  overflow-wrap: break-word;
-  font-weight: bold;
-  text-shadow: 0.0vw 0.3vw 0.3vw rgb(0 0 0 / 0.2);
-  margin-bottom: 0.0vh;
-}
 #THC {
-  font-weight: 900;
+  font-weight: bold;
   text-shadow: 0.0vw 0.3vw 0.3vw rgb(0 0 0 / 0.2);
 }
 #CBD {
-  font-weight: 900;
+  font-weight: bold;
   text-shadow: 0.0vw 0.3vw 0.3vw rgb(0 0 0 / 0.2);
 }
 #Sativa {
@@ -145,9 +104,6 @@ p {
 #Grow {
   font-weight: bold;
   text-shadow: 0.0vw 0.3vw 0.3vw rgb(0 0 0 / 0.2);
-}
-.post-IorS {
-  font-weight: bold;
 }
 /* Place the navbar at the bottom of the page, and make it stick */
 .navbar {

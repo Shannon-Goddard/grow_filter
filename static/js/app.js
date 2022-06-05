@@ -21,7 +21,7 @@ function populateTable() {
   for (let data of tableData) {
     let row = table.insertRow(-1);
     let strain = row.insertCell(0);
-    strain.innerHTML = data.strain;
+    strain.innerHTML = "<img src="+data.logo+" width='40' height='40'/>"+" "+data.strain;
     let THC = row.insertCell(1);
     THC.innerHTML = data.THC;
     let CBD = row.insertCell(2);
@@ -32,6 +32,8 @@ function populateTable() {
     Sativa.innerHTML = data.Sativa;
     let Hybrid = row.insertCell(5);
     Hybrid.innerHTML = data.Hybrid;
+    let Grow = row.insertCell(6);
+    Grow.innerHTML = data.Grow;
   }
   filterTable();
 }
@@ -44,7 +46,7 @@ function filterTable() {
     for (let cell of cells) {
       if (cell.textContent.toUpperCase().indexOf(filter) > -1) {
         if (filter) {
-          cell.style.backgroundColor = 'yellow';
+          cell.style.backgroundColor = '#04AA6D';
         } else {
           cell.style.backgroundColor = '';
         }
