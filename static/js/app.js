@@ -65,6 +65,40 @@ populateTable();
 input.addEventListener('keyup', function(event) {
   filterTable();
 });
+$("#all").val(null).trigger("change");
+function myFunction() {
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("types");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("mytable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[3];
+    td2 = tr[i].getElementsByTagName("td")[4];
+    td3 = tr[i].getElementsByTagName("td")[5];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+        if (td2) {
+          if (td2.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+            if (td3) {
+              if (td3.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+              } else {
+                tr[i].style.display = "none";
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 //Toggle between adding and removing the "responsive" class to the navbar when the user clicks on the icon//
 function navFunction() {
   var x = document.getElementById("myNavbar");
