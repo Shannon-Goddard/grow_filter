@@ -161,3 +161,63 @@ tr:hover td {
     text-align: left;
   }
 }
+/* user selection data css*/
+.post-container {
+  text-align: justify;
+  text-justify: inter-word;
+  width:100%;
+  inline-size: 100%;
+  position: relative;
+  padding: 2.0vmin 2.0vmin calc(20px + 10.0vmin) 2.0vmin;
+ }
+#image {
+  float: left;
+  display: none;
+  margin: 1.0vmin 2.0vmin 0.0vmin 0.0vmin;
+  -webkit-filter: drop-shadow(5px 5px 5px rgb(0 0 0 / 0.2));
+  filter: drop-shadow(5px 5px 5px rgb(0 0 0 / 0.2));
+}
+.info {
+  inline-size: 100%;
+  overflow-wrap: break-word;
+  font-weight: bold;
+}
+.more_info {
+  inline-size: 100%;
+  overflow-wrap: break-word;
+  font-weight: bold;
+}
+.post-title {
+  inline-size: 100%;
+  overflow-wrap: break-word;
+  font-weight: bold;
+  text-shadow: 0.0vw 0.3vw 0.3vw rgb(0 0 0 / 0.2);
+  margin-bottom: 0.0vh;
+}
+.post-container #THC {
+  font-weight: 900;
+  text-shadow: 0.0vw 0.3vw 0.3vw rgb(0 0 0 / 0.2);
+}
+.post-container #CBD {
+  font-weight: 900;
+  text-shadow: 0.0vw 0.3vw 0.3vw rgb(0 0 0 / 0.2);
+}
+.post-container #Sativa {
+  font-weight: bold;
+  text-shadow: 0.0vw 0.3vw 0.3vw rgb(0 0 0 / 0.2);
+}
+.post-container #Indica {
+  font-weight: bold;
+  text-shadow: 0.0vw 0.3vw 0.3vw rgb(0 0 0 / 0.2);
+}
+.post-container #Hybrid {
+  font-weight: bold;
+  text-shadow: 0.0vw 0.3vw 0.3vw rgb(0 0 0 / 0.2);
+}
+.post-container #Grow {
+  font-weight: bold;
+  text-shadow: 0.0vw 0.3vw 0.3vw rgb(0 0 0 / 0.2);
+}
+.post-IorS {
+  font-weight: bold;
+}
