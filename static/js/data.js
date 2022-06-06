@@ -29847,16 +29847,16 @@ var data = [
   },
   {
     index: "2296",
-    strain: "South Indian Grow",
-    info: "What are some of your favorite strains on the market? If they’re hybrids, there’s a good chance that some part of their lineage includes South Indian Grow. A large category that refers to the native landraces found in this part of the world, South Indian Grow is quite hard to find in its original form. Instead, breeders rely on this plant to help them create other exceptional strains.",
-    more_info: "A fairly mellow strain in its own right, South Indian Grow is a great option for all users with an average of 11% THC. These small nugs feature a beautiful forest green color along with contrasting amber highlights and a fine coating of trichomes. In most cases, these landraces test your palette with a peppery yet sweet flavor that includes hints of earth, herbs, and flowers. Some may find it cough inducing, so take your time getting to know this gal.",
+    strain: "South Indian Indica",
+    info: "What are some of your favorite strains on the market? If they’re hybrids, there’s a good chance that some part of their lineage includes South Indian Indica. A large category that refers to the native landraces found in this part of the world, South Indian Indica is quite hard to find in its original form. Instead, breeders rely on this plant to help them create other exceptional strains.",
+    more_info: "A fairly mellow strain in its own right, South Indian Indica is a great option for all users with an average of 11% THC. These small nugs feature a beautiful forest green color along with contrasting amber highlights and a fine coating of trichomes. In most cases, these landraces test your palette with a peppery yet sweet flavor that includes hints of earth, herbs, and flowers. Some may find it cough inducing, so take your time getting to know this gal.",
     THC: "",
     CBD: "0",
     Indica:"",
     Hybrid:"",
     Sativa: "",
     Grow: "",
-    logo: "static/images/South_Indian_Grow.jpg"
+    logo: "static/images/South_Indian_Indica.jpg"
   },
   {
     index: "2297",

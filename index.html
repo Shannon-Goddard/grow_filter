@@ -14,49 +14,42 @@
         <div id="wrapper">
             <img src="static\images\logo.jpg" alt="loyal" class="center">
             <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-4">
-                        <h1 style="color: darkslategrey">Look up your favorite strain <small>or find a new favorite</small></h1>
-                        <p style="color: darkslategrey">Click on the header of a column to sort the table</p>
+                <h1 style="color: darkslategrey">Look up your favorite strain <br> <small>or find a new favorite</small></h1>
+                <p style="color: darkslategrey">Click on the header of a column to sort the table</p>
+                <div class="types-content">
+                    <form>
+                        <p style="color: darkslategrey" id="log"><b>Filter Search</b> Choose a type:</p>
+                        <ul class="myUL">
+                            <select name="types" id="types" class="types" style="color: darkslategrey" onchange="myFunction()">
+                                <option id="all" class="all">ALL</option>
+                                <option value="Indica">Indica</option>
+                                <option value="Sativa">Sativa</option>
+                                <option value="Hybrid">Hybrid</option>
+                            </select>
+                        </ul>
+                    </form>
+                </div>
+                <div class="search-content">
+                    <input type="text" id="myinput" placeholder="Search for strains.." title="Type in something">
+                    <table class="sortable">
+                        <thead><tr>
+                            <th><span id="strain" class="w3-button table-column">Strain <i class="fa fa-fw fa-sort"></i></span></th>
+                            <th><span id="THC" class="w3-button table-column">THC <i class="fa fa-fw fa-sort"></i></span></th>
+                            <th><span id="CBD" class="w3-button table-column">CBD <i class="fa fa-fw fa-sort"></i></span></th>
+                            <th><span id="Indica" class="w3-button table-column">Indica <i class="fa fa-fw fa-sort"></i></span></th>
+                            <th><span id="Sativa" class="w3-button table-column">Sativa <i class="fa fa-fw fa-sort"></i></span></th>
+                            <th><span id="Hybrid" class="w3-button table-column">Hybrid <i class="fa fa-fw fa-sort"></i></span></th>
+                            <th><span id="Grow" class="w3-button table-column">Weeks of Flowering <i class="fa fa-fw fa-sort"></i></span></th>
+                            
+                            <tr id="hidden_row" class="hidden_row">
+                                <td colspan="0">Person-1 is 24 years old and he is a computer programmer he earns 60000 per month</td>
+                            
+                            </tr></thead>
+                            <tbody id="mytable"></tbody>
+                        </table>
                     </div>
                 </div>
-            </div>
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-3">
-                        <form>
-                            <p style="color: darkslategrey" id="log"><b>Filter Search</b> Choose a type:</p>
-                            <ul class="myUL">
-                                <select name="types" id="types" class="types" onchange="myFunction()">
-                                    <option id="all">ALL</option>
-                                    <option value="Indica">Indica</option>
-                                    <option value="Sativa">Sativa</option>
-                                    <option value="Hybrid">Hybrid</option>
-                                </select>
-                            </ul>
-                        </form>
-                    </div>
-                    <div class="col-md-9">
-                        <div class="search-content">
-                            <input type="text" id="myinput" placeholder="Search for strains.." title="Type in something">
-                            <table class="sortable">
-                                <thead><tr>
-                                    <th><span id="strain" class="w3-button table-column">Strain <i class="fa fa-fw fa-sort"></i></span></th>
-                                    <th><span id="THC" class="w3-button table-column">THC <i class="fa fa-fw fa-sort"></i></span></th>
-                                    <th><span id="CBD" class="w3-button table-column">CBD <i class="fa fa-fw fa-sort"></i></span></th>
-                                    <th><span id="Indica" class="w3-button table-column">Indica <i class="fa fa-fw fa-sort"></i></span></th>
-                                    <th><span id="Sativa" class="w3-button table-column">Sativa <i class="fa fa-fw fa-sort"></i></span></th>
-                                    <th><span id="Hybrid" class="w3-button table-column">Hybrid <i class="fa fa-fw fa-sort"></i></span></th>
-                                    <th><span id="Grow" class="w3-button table-column">Weeks of Flowering <i class="fa fa-fw fa-sort"></i></span></th>
-                                </tr></thead>
-                                <tbody id="mytable"></tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
     <div class="navbar" id="myNavbar">
         <a class="nav-link" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
         <a class="nav-link active" href="#"><i class="fa fa-fw fa-search"></i> Search</a>

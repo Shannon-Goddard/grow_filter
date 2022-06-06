@@ -37,36 +37,24 @@ function populateTable() {
   }
   filterTable();
 }
+//filter table by user input
 function filterTable() {
   let filter = input.value.toUpperCase();
   rows = table.getElementsByTagName("TR");
   let flag = false;
   for (let row of rows) {
-    let cells = row.getElementsByTagName("TD");
-    for (let cell of cells) {
-      if (cell.textContent.toUpperCase().indexOf(filter) > -1) {
-        if (filter) {
-          cell.style.backgroundColor = '#04AA6D';
-        } else {
-          cell.style.backgroundColor = '';
-        }
-        flag = true;
-      } else {
-        cell.style.backgroundColor = '';
-      }
-    }
-    if (flag) {
+    if (row.textContent.toUpperCase().indexOf(filter) > -1) {
       row.style.display = "";
     } else {
       row.style.display = "none";
     }
-    flag = false;
   }
 }
 populateTable();
 input.addEventListener('keyup', function(event) {
   filterTable();
 });
+//drop menu options to filter table
 $("#all").val(null).trigger("change");
 function myFunction() {
   var input, filter, table, tr, td, i;
@@ -100,6 +88,22 @@ function myFunction() {
       }
     }
   }
+}
+//toggle more info each row
+const createClickHandler = (row) => {
+  return () => {
+    const [cell] = row.getElementsByTagName("td");
+    if (hidden_row.style.display === "none") {
+      hidden_row.style.display = "block";
+    } else {
+      hidden_row.style.display = "none";
+    }
+    const id = cell.innerHTML;
+    console.log(id);
+  };
+};
+for (const currentRow of table.rows) {
+  currentRow.onclick = createClickHandler(currentRow);
 }
 //Toggle between adding and removing the "responsive" class to the navbar when the user clicks on the icon//
 function navFunction() {

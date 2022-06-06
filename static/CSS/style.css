@@ -22,12 +22,15 @@ HTML, BODY {
 table, th, td {
   border: 1px solid black;
   border-collapse: collapse;
+  box-shadow: 0 0.3vw 1.0vw rgb(0 0 0 / 0.2);
+  width: 100%; /* Full-width */
+  font-size: 1.5vw; /* Increase font-size */
+  padding: 0.5vw 0.5vw 0.5vw 0.5vw; /* Add some padding */
+  border: 0.1vw solid #ddd; /* Add a grey border */
+  margin-bottom: 1.0vw; /* Add some space below the input */
 }
-th, td {
-  padding: 5px;
-}
-th {
-  text-align: left;
+table .hidden_row {
+  display: none;
 }
 /*font size*/
 h1 {
@@ -78,7 +81,7 @@ p {
   color: black; /* Add a black text color */
   display: block; /* Make it into a block element to fill the whole list */
 }
-tr:hover:not(.th) {
+tr:hover td {
   background-color: #04AA6D; /* Add a hover effect to all links, except for headers */
 }
 #THC {
