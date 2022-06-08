@@ -20,8 +20,9 @@ function populateTable() {
   table.innerHTML = '';
   for (let data of tableData) {
     let row = table.insertRow(-1);
+    row.setAttribute("id",data.index);
     let strain = row.insertCell(0);
-    strain.innerHTML = "<img src="+data.logo+" width='40' height='40'/>"+" "+data.strain;
+    strain.innerHTML = "<img src="+data.logo+" width='40' height='40'/>"+" "+data.strain+" "+"<button class='hide' on-click='togFunction' >Show more info</button>";
     let THC = row.insertCell(1);
     THC.innerHTML = data.THC;
     let CBD = row.insertCell(2);
@@ -89,42 +90,38 @@ function myFunction() {
     }
   }
 }
-
+//Show hidden info on user selection of table row
 $(document).ready(function(){
   $(function() {
-      $("tr").click(function() {
-  const d = data;
-  //Change logo, strain, Grow, Sativa, THC, CBD, info, and more_info on user selection of search drop
-  for (let value of d.values()) {
-    var logo, strain, Grow, Sativa, Indica, Hybrid, THC, CBD, info, more_info, Index;
-    
-    logo = value.logo;
-    strain = value.strain;
-    Grow = value.Grow;
-    Sativa = value.Sativa;
-    Indica = value.Indica;
-    Hybrid = value.Hybrid;
-    THC = value.THC;
-    CBD = value.CBD;
-    info = value.info;
-    more_info = value.more_info;
-    Index = $(this).closest('tr').index()
-   
-    
-    $("#image").attr("src" , d[Index].logo).show();
-    $("#strain").text(d[Index].strain);
-    $("#Grow").text(d[Index].Grow+' weeks of flowering');
-    $("#Sativa").text(d[Index].Sativa);
-    $("#Indica").text(d[Index].Indica);
-    $("#Hybrid").text(d[Index].Hybrid);
-    $("#THC").text('THC: '+d[Index].THC+'%');
-    $("#CBD").text('CBD: '+d[Index].CBD+'%');
-    $("#info").text(d[Index].info);
-    $("#more_info").text(d[Index].more_info);
-    document.getElementById("myinput").value = "";
-  }
-});
-});
+    $("tr").click(function() { 
+      const d = data;
+      for (let value of d.values()) {
+        var logo, strain, Grow, Sativa, Indica, Hybrid, THC, CBD, info, more_info, Index;
+        logo = value.logo;
+        strain = value.strain;
+        Grow = value.Grow;
+        Sativa = value.Sativa;
+        Indica = value.Indica;
+        Hybrid = value.Hybrid;
+        THC = value.THC;
+        CBD = value.CBD;
+        info = value.info;
+        more_info = value.more_info;
+        Index = $(this).closest('tr').attr('id');
+        $("#image").attr("src" , d[Index].logo).show();
+        $("#strain").text(d[Index].strain);
+        $("#Grow").text(d[Index].Grow+' weeks of flowering');
+        $("#Sativa").text(d[Index].Sativa);
+        $("#Indica").text(d[Index].Indica);
+        $("#Hybrid").text(d[Index].Hybrid);
+        $("#THC").text('THC: '+d[Index].THC+'%');
+        $("#CBD").text('CBD: '+d[Index].CBD+'%');
+        $("#info").text(d[Index].info);
+        $("#more_info").text(d[Index].more_info);
+        document.getElementById("myinput").value = "";
+      }
+    });
+  });
 });
 //Toggle between adding and removing the "responsive" class to the navbar when the user clicks on the icon//
 function navFunction() {
