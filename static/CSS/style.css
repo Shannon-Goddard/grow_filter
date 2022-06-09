@@ -29,9 +29,7 @@ table, th, td {
   border: 0.1vw solid #ddd; /* Add a grey border */
   margin-bottom: 1.0vw; /* Add some space below the input */
 }
-table .hidden_row {
-  display: none;
-}
+
 /*font size*/
 h1 {
   font-size: calc(16px + 3.0vmin);
