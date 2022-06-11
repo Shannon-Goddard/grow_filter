@@ -33,29 +33,31 @@
                     <input type="text" id="myinput" placeholder="Search for strains.." title="Type in something">
                     <table id="myTable" class="sortable">
                         <thead>
-                            <tr>
-                                <th><span id="strain" class="w3-button table-column">Strain <i class="fa fa-fw fa-sort"></i></span></th>
-                                <th><span id="THC" class="w3-button table-column">THC <i class="fa fa-fw fa-sort"></i></span></th>
-                                <th><span id="CBD" class="w3-button table-column">CBD <i class="fa fa-fw fa-sort"></i></span></th>
-                                <th><span id="Indica" class="w3-button table-column">Indica <i class="fa fa-fw fa-sort"></i></span></th>
-                                <th><span id="Sativa" class="w3-button table-column">Sativa <i class="fa fa-fw fa-sort"></i></span></th>
-                                <th><span id="Hybrid" class="w3-button table-column">Hybrid <i class="fa fa-fw fa-sort"></i></span></th>
-                                <th><span id="Grow" class="w3-button table-column">Weeks of Flowering <i class="fa fa-fw fa-sort"></i></span></th>
+                            <tr id="head">
+                                <th><span id="THstrain" class="w3-button table-column">Strain <i class="fa fa-fw fa-sort"></i></span></th>
+                                <th><span id="THTHC" class="w3-button table-column">THC <i class="fa fa-fw fa-sort"></i></span></th>
+                                <th><span id="THCBD" class="w3-button table-column">CBD <i class="fa fa-fw fa-sort"></i></span></th>
+                                <th><span id="THIndica" class="w3-button table-column">Indica <i class="fa fa-fw fa-sort"></i></span></th>
+                                <th><span id="THSativa" class="w3-button table-column">Sativa <i class="fa fa-fw fa-sort"></i></span></th>
+                                <th><span id="THHybrid" class="w3-button table-column">Hybrid <i class="fa fa-fw fa-sort"></i></span></th>
+                                <th><span id="THGrow" class="w3-button table-column">Weeks of Flowering <i class="fa fa-fw fa-sort"></i></span></th>
 
-                            <div id="myDIV" STYLE="display:none">
-                                <tr colspan="0" id="hidden_row" class="hidden_row">
+                            <div id="myDIV" class="myDIV">
+                                <tr hidden id="hidden">
+                                    <td colspan="100%" >
                                     
-                                    <div class="image"><img id="image" src="" style="width:45%;" alt=""></div>
-                                    <h1 class="post-title" style="color: black;"><div id="strain"></div></h1>
-                                    <h2><div id="THC" style="color: black;"></div></h2>
-                                    <h2><div id="CBD" style="color: black;"></div></h2>
-                                    <h3><div id="Sativa" style="color: black;"></div><div id="Indica" style="color: black;"></div><div id="Hybrid" style="color: black;"></div></h3>
-                                    <h4><div id="Grow" style="color: black;"></div></h4>
+                                    <img id="image" class="image" src="" style="width:45%;" alt="">
+                                    <h1 id="strain" style="color: black;"></h1>
+                                    <h2 id="THC" style="color: black;"></h2>
+                                    <h2 id="CBD" style="color: black;"></h2>
+                                    <h3 id="Sativa" style="color: black;"></h3><h3 id="Indica" style="color: black;"></h3><h3 id="Hybrid" style="color: black;"></h3>
+                                    <h4 id="Grow" style="color: black;"></h4>
                                     <br>
                                     <div id="info" style="color: black;"></div>
                                     <br>
                                     <div id="more_info" style="color: black;"></div>
 
+                                    </td>
                                 </tr>
                             </div>
 

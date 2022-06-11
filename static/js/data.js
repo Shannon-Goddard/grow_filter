@@ -16,7 +16,7 @@ var data = [
     index: "1",
     strain: "Blue Dream",
     info: "With a relatively high THC range that averages at a low of 17% and a high of 24%, this dreamy bud has more than just good looks and flavor to bring to the table. The CBD and CBN levels reach 2% and 1% respectively, making this a stellar strain for treating a myriad of ailments. The delicious flavors of blueberry and sugar are long lasting and stay in the air and on your tongue long after the smoke has gone. The nugs are long and bushy, with deep blue hues, amber and blue hairs, and an abundance of milky white trichomes.",
-    more_info: "With a relatively high THC range that averages at a low of 17% and a high of 24%, this dreamy bud has more than just good looks and flavor to bring to the table. The CBD and CBN levels reach 2% and 1% respectively, making this a stellar strain for treating a myriad of ailments. The delicious flavors of blueberry and sugar are long lasting and stay in the air and on your tongue long after the smoke has gone. The nugs are long and bushy, with deep blue hues, amber and blue hairs, and an abundance of milky white trichomes.",
+    more_info: "",
     THC: "27",
     CBD: "2",
     Indica:"",

@@ -22,7 +22,7 @@ function populateTable() {
     let row = table.insertRow(-1);
     row.setAttribute("id",data.index);
     let strain = row.insertCell(0);
-    strain.innerHTML = "<button id='hide' class='hide' on-click='ShowAndHide()'>Show more info</button>"+" "+"<img src="+data.logo+" width='40' height='40'"+" "+data.strain+"/>";
+    strain.innerHTML = "<button id='hide' class='toggle' onclick='toggle(this)'>Show more info</button>"+" "+"<img src="+data.logo+" width='40' height='40'/>"+" "+data.strain+"";
     let THC = row.insertCell(1);
     THC.innerHTML = data.THC;
     let CBD = row.insertCell(2);
@@ -93,7 +93,7 @@ function myFunction() {
 //Show hidden info on user selection of table row button
 $(document).ready(function(){
   $(function() {
-    $("button").click(function() { 
+    $('.toggle').click(function() { 
       const d = data;
       for (let value of d.values()) {
         var logo, strain, Grow, Sativa, Indica, Hybrid, THC, CBD, info, more_info, Index;
@@ -108,8 +108,7 @@ $(document).ready(function(){
         info = value.info;
         more_info = value.more_info;
         Index = $(this).closest('tr').attr('id');
-        var n = $(this).closest('button');
-
+        const n = $(this).closest('button');
         $("#image").attr("src" , d[Index].logo).show();
         $("#strain").text(d[Index].strain);
         $("#Grow").text(d[Index].Grow+' weeks of flowering');
@@ -121,16 +120,23 @@ $(document).ready(function(){
         $("#info").text(d[Index].info);
         $("#more_info").text(d[Index].more_info);
         document.getElementById("myinput").value = "";
-        //change button text on click
-        n.html('Show less info');
       }
-      });
     });
   });
+});
+//toggle hidden row
+let toggle = button => {
+  let element = document.getElementById("hidden");
+  let hidden = element.getAttribute("hidden");
 
-
-
-
+  if (hidden) {
+     element.removeAttribute("hidden");
+     button.innerText = "Show less info";
+  } else {
+     element.setAttribute("hidden", "hidden");
+     button.innerText = "Show more info";
+  }
+}
 //Toggle between adding and removing the "responsive" class to the navbar when the user clicks on the icon//
 function navFunction() {
   var x = document.getElementById("myNavbar");
