@@ -6,6 +6,7 @@
 [Resources](#resources)  
 [Objectives](#objectives)  
 [Summary](#summary)  
+[List of Task](#list-of-task)  
 [Limitations](#limitations)  
   
 ## Project Overview  
@@ -26,6 +27,15 @@ In this module, we used a .csv file with 2,793 rows of data for each strain list
 **Check-out the app this project was used with [here]()**
 
 ![](/pics/gif.gif)  
+
+## List of Task  
+- Load time is @ 8 seconds  
+    - Hard code table in HTML  
+    - Abbreviate varibales  
+    - Condense code  
+
+- More info does not show after table has been filtered  
+    - Check after hard coding table. Using Bootstrap for filter, possibly add function to replace. Check order of functions as well.
 
 ## Limitations  
 Shannon-Goddard/grow_search is licensed under the [MIT License](https://github.com/Shannon-Goddard/grow_search/blob/main/LICENSE). This site and content made available through this site are for educational and informational purposes only. This site may contain copyrighted material owned by a third party, the use of which has not always been specifically authorized by the copyright owner. Notwithstanding a copyright owner's rights under the Copyright Act, Section 107 of the copyright act allows limited use of copyright material without requiring permission from the rights holders, for purposes such as education, criticism, comment, news reporting, teaching, scholarship, and research. These so-called "fair uses" are permitted even if the use of the work would otherwise be infringing.If you wish to use copyright material published on this site for your own purposes that go beyond fair use, you must obtain permission from the copyright owner. We recommend you seek legal council if you have any questions at this point.
