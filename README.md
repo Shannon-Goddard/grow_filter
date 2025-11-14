@@ -7,8 +7,6 @@
 [![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow.svg)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![Bootstrap](https://img.shields.io/badge/Bootstrap-4.0+-purple.svg)](https://getbootstrap.com/)
 
-![header](/pics/header.png)
-
 ## 🚀 Project Overview
 
 **Grow Filter** is a powerful, interactive web application that transforms the comprehensive cannabis strain database into an intuitive, searchable, and filterable interface. Built with modern web technologies, it provides users with instant access to detailed information about **2,793+ cannabis strains** through advanced filtering, sorting, and search capabilities.
